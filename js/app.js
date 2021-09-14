@@ -51,7 +51,7 @@ const updatePrice = (id, value) => {
   const convertedOldPrice = getInputValue(id);
   const convertPrice = parseFloat(value);
   const total = convertedOldPrice+convertPrice;
-  document.getElementById(id).innerText = parseFloat(total);
+  document.getElementById(id).innerText = total.toFixed(2);
   updateTotal()
 };
 
@@ -86,6 +86,6 @@ const updateTaxAndCharge = () => {
 const updateTotal = () => {
   const grandTotal =getInputValue("price") + getInputValue("delivery-charge") +
  getInputValue("total-tax");
-  document.getElementById("total").innerText = parseFloat(grandTotal) ;
+  document.getElementById("total").innerText = grandTotal.toFixed(2) ;
 };
 
